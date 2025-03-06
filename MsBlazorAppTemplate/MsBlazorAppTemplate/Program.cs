@@ -1,3 +1,4 @@
+using dymaptic.GeoBlazor.Core;
 using Gis.BlazorServerApp;
 using MsBlazorAppTemplate.Components;
 
@@ -8,6 +9,8 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
 builder.AddSecretToConfiguration("ArcGISApiKey");
+
+builder.Services.AddGeoBlazor(builder.Configuration);
 
 var app = builder.Build();
 
